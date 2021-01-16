@@ -20,7 +20,7 @@ export const About: React.FC = () => {
         </div>
         <div className="flex items-center gap-8 p-8 lg:p-24 select-none">
           <Image
-            className="rounded-lg w-1/2"
+            className="rounded-2xl"
             src="/photo.jpeg"
             width={320}
             height={400}
