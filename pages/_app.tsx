@@ -7,6 +7,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <title>Sen Hung Wong</title>
       </Head>
       <Component {...pageProps} />
     </>
