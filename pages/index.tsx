@@ -1,6 +1,5 @@
 import React from "react";
 import { About } from "../components/About";
-import { Contact } from "../components/Contact";
 import { Miscellaneous } from "../components/Miscellaneous";
 import { Navbar } from "../components/Navbar";
 import { Projects } from "../components/Projects";
@@ -26,9 +25,6 @@ const IndexPage: React.FC = () => {
       </div>
       <div id="miscellaneous">
         <Miscellaneous />
-      </div>
-      <div id="contact">
-        <Contact />
       </div>
     </div>
   );

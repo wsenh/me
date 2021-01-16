@@ -7,7 +7,6 @@ const NAV_LINKS: { text: string; href: string }[] = [
   { text: "About", href: "/#about" },
   { text: "Projects", href: "/#projects" },
   { text: "Miscellaneous", href: "/#miscellaneous" },
-  { text: "Contact", href: "/#contact" },
 ];
 
 export const Navbar: React.FC = () => {
