@@ -25,22 +25,31 @@ export const Footer: React.FC = () => {
         </p>
         <span className="inline-flex text-2xl sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <Link href="mailto:me@wsenh.com">
-            <a className="text-gray-200" target="_blank">
+            <a
+              className="text-gray-400 hover:text-white transition"
+              target="_blank"
+            >
               <EmailIcon />
             </a>
           </Link>
           <Link href="https://github.com/wsenh">
-            <a className="ml-4 text-gray-200" target="_blank">
+            <a
+              className="ml-4 text-gray-400 hover:text-white transition"
+              target="_blank"
+            >
               <GithubIcon />
             </a>
           </Link>
           <Link href="https://www.linkedin.com/in/senhungwong/">
-            <a className="ml-4 text-gray-200" target="_blank">
+            <a
+              className="ml-4 text-gray-400 hover:text-white transition"
+              target="_blank"
+            >
               <LinkedInIcon />
             </a>
           </Link>
           <Link href="https://senhung.itch.io/">
-            <a className="ml-4 text-gray-200">
+            <a className="ml-4 text-gray-400 hover:text-white transition">
               <ItchIcon />
             </a>
           </Link>
