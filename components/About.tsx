@@ -18,7 +18,7 @@ export const About: React.FC = () => {
             January 2018 to December 2018.
           </p>
         </div>
-        <div className="flex items-center gap-8 p-8 lg:p-24 select-none">
+        <div className="flex items-center justify-center p-8 lg:p-24 select-none">
           <Image
             className="rounded-2xl"
             src="/photo.jpeg"
