@@ -11,7 +11,7 @@ const PROJECTS: { href: string; src: string }[] = [
 
 export const Projects: React.FC = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">

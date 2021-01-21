@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
         className={`${
           isover
             ? "text-gray-300 hover:text-white"
-            : "text-gray-400 hover:text-gray-700"
+            : "text-gray-400 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white"
         } px-3 py-2 rounded-md text-base font-medium transition`}
       >
         {text}
@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
         className={`${
           isover
             ? "text-gray-300 hover:text-white"
-            : "text-gray-400 hover:text-gray-700"
+            : "text-gray-400 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white"
         } px-3 py-2 rounded-md text-base font-medium transition block`}
       >
         {text}
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div
           className={`flex items-center justify-between h-16 transition duration-500 ${
-            isOverThreshold ? "" : "transhtmlForm translate-y-2"
+            isOverThreshold ? "" : "transform translate-y-4"
           }`}
         >
           <div className="flex w-full items-center">

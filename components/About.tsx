@@ -3,13 +3,13 @@ import React from "react";
 
 export const About: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 overflow-hidden relative">
+    <div className="bg-white dark:bg-gray-700 overflow-hidden relative">
       <div className="max-w-7xl mx-auto justify-around lg:flex lg:items-center">
         <div className="py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-          <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-black dark:text-gray-100 sm:text-4xl">
             <span className="block">About Me</span>
           </h2>
-          <p className="text-md mt-4 text-gray-400">
+          <p className="text-md mt-4 text-gray-400 dark:text-gray-300">
             Hi, I am Sen Hung Wong.
             <br />I am passionate about software design and game development.
             <br />- Graduated at Simon Fraser University on December 2020.
