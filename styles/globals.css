@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 html {
-  @apply bg-gray-100;
   scroll-behavior: smooth;
 }

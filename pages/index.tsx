@@ -8,7 +8,7 @@ import { Title } from "../components/Title";
 
 const IndexPage: React.FC = () => {
   return (
-    <div className="w-full h-screen dark:bg-gray-800 flex flex-col">
+    <div className="w-full h-screen bg-gray-100 dark:bg-gray-800 flex flex-col">
       <div className="fixed w-full z-50">
         <Navbar />
       </div>

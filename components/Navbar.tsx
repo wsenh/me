@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { MenuIcon } from "./MenuIcon";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 const NAV_LINKS: { text: string; href: string }[] = [
   { text: "Home", href: "/#" },
@@ -61,17 +62,20 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div
           className={`flex items-center justify-between h-16 transition duration-500 ${
-            isOverThreshold ? "" : "transform translate-y-2"
+            isOverThreshold ? "" : "transhtmlForm translate-y-2"
           }`}
         >
-          <div className="flex items-center">
-            <div className="hidden md:block">
+          <div className="flex w-full items-center">
+            <div className="hidden md:block w-full">
               <div className="ml-10 flex items-baseline space-x-4">
                 {NAV_LINKS.map(({ text, href }) => (
                   <React.Fragment key={text}>
                     {desktopLink(text, href, isOverThreshold)}
                   </React.Fragment>
                 ))}
+                <div className="flex flex-1 items-baseline justify-end">
+                  <ThemeSwitch />
+                </div>
               </div>
             </div>
           </div>
@@ -96,6 +100,15 @@ export const Navbar: React.FC = () => {
               {mobileLink(text, href, isOverThreshold)}
             </React.Fragment>
           ))}
+          <div
+            className={`${
+              isOverThreshold
+                ? "text-gray-300 hover:text-white"
+                : "text-gray-400 hover:text-gray-700"
+            } px-3 py-2 rounded-md text-base font-medium transition block`}
+          >
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
     </nav>
