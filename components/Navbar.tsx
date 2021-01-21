@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden" style={{ display: isOpen ? "block" : "none" }}>
+      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {NAV_LINKS.map(({ text, href }) => (
             <React.Fragment key={text}>
