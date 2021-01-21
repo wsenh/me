@@ -3,7 +3,7 @@ import React from "react";
 
 export const About: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-gray-700 overflow-hidden relative">
+    <div className="bg-gray-100 dark:bg-gray-800 overflow-hidden relative">
       <div className="max-w-7xl mx-auto justify-around lg:flex lg:items-center">
         <div className="py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
           <h2 className="text-3xl font-extrabold text-black dark:text-gray-100 sm:text-4xl">

@@ -49,7 +49,10 @@ export const Footer: React.FC = () => {
             </a>
           </Link>
           <Link href="https://senhung.itch.io/">
-            <a className="ml-4 text-gray-400 hover:text-white transition">
+            <a
+              className="ml-4 text-gray-400 hover:text-white transition"
+              target="_blank"
+            >
               <ItchIcon />
             </a>
           </Link>

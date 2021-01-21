@@ -12,16 +12,16 @@ const IndexPage: React.FC = () => {
       <div className="fixed w-full z-50">
         <Navbar />
       </div>
-      <div
-        id="home"
-        className="flex flex-none items-center justify-center h-screen w-full"
-      >
+      <div id="home" className="border-b border-gray-300 dark:border-gray-500">
         <Title />
       </div>
-      <div id="about">
+      <div id="about" className="border-b border-gray-300 dark:border-gray-500">
         <About />
       </div>
-      <div id="projects">
+      <div
+        id="projects"
+        className="border-b border-gray-300 dark:border-gray-500"
+      >
         <Projects />
       </div>
       <div id="miscellaneous">

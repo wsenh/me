@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav
       className={`transition duration-700 ${
-        isOverThreshold ? "bg-gray-900" : "bg-transparent"
+        isOverThreshold ? "bg-gray-900 shadow-2xl" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-8">
