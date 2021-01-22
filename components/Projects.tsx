@@ -4,6 +4,7 @@ import { Project } from "./Project";
 const PROJECTS: { href: string; src: string }[] = [
   { src: "/pizza.png", href: "https://senhung.itch.io/pipipizza" },
   { src: "/twopowerful.gif", href: "https://senhung.itch.io/two-powerful" },
+  { src: "/TicTacToe.gif", href: "https://algorithms.wsenh.com/tictactoe" },
   { src: "/ld47.png", href: "https://senhung.itch.io/enjoy-your-stay" },
   { src: "/dungeon.gif", href: "https://senhung.itch.io/dungeon-guidance" },
   { src: "/seagulls.png", href: "https://senhung.itch.io/duck-vs-seagulls" },
