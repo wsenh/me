@@ -17,8 +17,10 @@ export const Navbar: React.FC = () => {
   const [isOverThreshold, setOverThreshold] = useState(false);
 
   const desktopLink = (text: string, href: string, isover: boolean) => (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a
+        aria-label={text}
+        rel="noopener"
         className={`${
           isover
             ? "text-gray-300 hover:text-white"
@@ -31,8 +33,10 @@ export const Navbar: React.FC = () => {
   );
 
   const mobileLink = (text: string, href: string, isover: boolean) => (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a
+        aria-label={text}
+        rel="noopener"
         className={`${
           isover
             ? "text-gray-300 hover:text-white"
@@ -81,6 +85,7 @@ export const Navbar: React.FC = () => {
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
+              aria-label={isOpen ? "Collapse Navigation" : "Expand Navigation"}
               className={`${
                 isOverThreshold
                   ? "text-gray-300 hover:text-white"

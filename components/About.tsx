@@ -9,7 +9,7 @@ export const About: React.FC = () => {
           <h2 className="text-3xl font-extrabold text-black dark:text-gray-100 sm:text-4xl">
             <span className="block">About Me</span>
           </h2>
-          <p className="text-md mt-4 text-gray-400 dark:text-gray-300">
+          <p className="text-md mt-4 text-gray-500 dark:text-gray-300">
             Hi, I am Sen Hung Wong.
             <br />I am passionate about software design and game development.
             <br />- Graduated at Simon Fraser University on December 2020.
