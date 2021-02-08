@@ -1,0 +1,6 @@
+-cp src
+-lib heaps
+-js bin/main.js
+-main Main
+-dce full
+-debug
