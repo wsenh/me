@@ -18,6 +18,7 @@ export const PostPreview: React.FC<Props> = ({ post, vert = false }) => {
         href="/posts/[slug]"
         as={`/posts/${post.slug}`}
         desc={post.title}
+        free={!vert}
       />
       <div
         className={`mt-4 md:mt-12 md:grid ${
