@@ -22,7 +22,7 @@ export const Thumbnail: React.FC<Props> = ({
     <Link as={as} href={href} passHref>
       <a aria-label={desc} rel="noopener">
         <div
-          className="p-1 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-500 bg-accent-700"
+          className="p-1 rounded-xl hover:bg-gray-400 transition duration-200 bg-accent-700"
           style={{ width, height }}
         >
           <img
