@@ -26,6 +26,11 @@ module.exports = {
         small: "0 5px 10px rgba(0, 0, 0, 0.12)",
         medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
+      colors: {
+        "accent-100": "#FAFAFA",
+        "accent-200": "#EAEAEA",
+        "accent-700": "#333",
+      },
     },
   },
   variants: {

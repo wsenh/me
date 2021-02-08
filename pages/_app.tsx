@@ -2,8 +2,8 @@ import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import Head from "next/head";
 import React from "react";
-import { Footer } from "../components/Footer";
 import { Container } from "../components/Layout/Container";
+import { Footer } from "../components/Layout/Footer";
 import { Layout } from "../components/Layout/Layout";
 import "../styles/globals.css";
 
