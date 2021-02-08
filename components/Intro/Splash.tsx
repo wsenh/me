@@ -9,7 +9,7 @@ export const Splash: React.FC = () => {
         </span>
         <img
           src="/static/imgs/handwritten-wong.png"
-          className="absolute w-6/12 md:top-11 md:-right-24 top-9 -right-14 hidden sm:block"
+          className="absolute w-6/12 md:top-16 md:-right-24 top-8 -right-10 hidden sm:block"
           draggable={false}
         />
       </h1>

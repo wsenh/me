@@ -1,38 +1,20 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { PostProps } from "../pages/posts/[slug]";
 
 const postsDirectory = path.join(process.cwd(), "public", "static", "posts");
 
-export const getAllPosts = (fields: string[] = []) => {
+export const getAllPosts = () => {
   const slugs = fs.readdirSync(postsDirectory);
-  return slugs.map((slug) => getPostBySlug(slug, fields)); // TODO sort
+  return slugs
+    .map((slug) => getPostBySlug(slug))
+    .sort((a, b) => b.timestamp - a.timestamp);
 };
 
-export const getPostBySlug = (slug: string, fields: string[] = []) => {
+export const getPostBySlug = (slug: string) => {
   const fullPath = path.join(postsDirectory, slug, `README.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = slug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-
-    if (data[field]) {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
+  return { ...data, slug, content } as PostProps;
 };

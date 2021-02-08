@@ -1,8 +1,32 @@
 module.exports = {
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
-  darkMode: 'class', // or 'media' or 'class'
+  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        28: "7rem",
+      },
+      letterSpacing: {
+        tighter: "-.04em",
+      },
+      lineHeight: {
+        tight: 1.2,
+      },
+      maxHeight: {
+        144: "36rem",
+        192: "48rem",
+      },
+      fontSize: {
+        "5xl": "2.5rem",
+        "6xl": "2.75rem",
+        "7xl": "4.5rem",
+        "8xl": "6.25rem",
+      },
+      boxShadow: {
+        small: "0 5px 10px rgba(0, 0, 0, 0.12)",
+        medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
+      },
+    },
   },
   variants: {
     extend: {
@@ -13,4 +37,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

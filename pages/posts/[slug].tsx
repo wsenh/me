@@ -8,7 +8,8 @@ import { markdownToHtml } from "../../lib/markdownToHtml";
 export type PostProps = {
   slug: string;
   title: string;
-  date: string;
+  excerpt: string;
+  timestamp: number;
   coverImage: string;
   ogImage: {
     url: string;
@@ -33,7 +34,7 @@ const Post: React.FC<Props> = ({ post }) => {
           <article>
             <Head>
               <title>{post.title}</title>
-              {/* <meta property="og:image" content={post.ogImage.url} /> */}
+              <meta property="og:image" content={post.ogImage.url} />
             </Head>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </article>
@@ -50,7 +51,7 @@ interface Params {
 }
 
 export const getStaticProps = async ({ params }: Params) => {
-  const post = getPostBySlug(params.slug, ["title", "slug", "content"]);
+  const post = getPostBySlug(params.slug);
   const content = await markdownToHtml(post.content || "");
   return {
     props: {
@@ -64,7 +65,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
 export const getStaticPaths = async () => {
   return {
-    paths: getAllPosts(["slug"]).map((post) => ({
+    paths: getAllPosts().map((post) => ({
       params: { slug: post.slug },
     })),
     fallback: false,

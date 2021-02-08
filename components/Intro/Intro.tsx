@@ -1,6 +1,6 @@
 import React from "react";
-import { Splash } from "../Shared/Splash";
 import { Text } from "../Shared/Text";
+import { Splash } from "./Splash";
 
 export const Intro: React.FC = () => {
   return (
