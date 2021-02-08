@@ -29,3 +29,7 @@ ogImage:
     </a>
   </p>
 </iframe>
+
+```js
+const code = {};
+```

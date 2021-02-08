@@ -2,6 +2,12 @@ import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { PostContentContainer } from "../../components/Layout/PostContentContainer";
+import { PostContent } from "../../components/Post/PostContent";
+import { PostTitle } from "../../components/Post/PostTitle";
+import { CoverImage } from "../../components/Shared/CoverImage";
+import { DateText } from "../../components/Shared/DateText";
+import { HomeButton } from "../../components/Shared/HomeButton";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
@@ -26,21 +32,29 @@ const Post: React.FC<Props> = ({ post }) => {
   if (!router.isFallback && !post?.slug) return <ErrorPage statusCode={404} />;
 
   return (
-    <div>
+    <>
+      <HomeButton />
       {router.isFallback ? (
         <>loading...</>
       ) : (
         <>
-          <article>
+          <article className="my-12">
             <Head>
               <title>{post.title}</title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <PostTitle content={post.title} />
+            <CoverImage href="/posts/[slug]" src={post.coverImage} free />
+            <div className="my-6">
+              <PostContentContainer>
+                <DateText unixtimestamp={post.timestamp} />
+                <PostContent content={post.content} />
+              </PostContentContainer>
+            </div>
           </article>
         </>
       )}
-    </div>
+    </>
   );
 };
 
