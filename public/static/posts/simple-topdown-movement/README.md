@@ -1,13 +1,13 @@
 ---
 title: "Simple Topdown Movement"
 timestamp: 1612775790
-coverImage: "/pizza.png"
+coverImage: "/static/imgs/simple-topdown-movement/cover.webm"
 excerpt: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sit,
   aut explicabo eaque id culpa blanditiis vitae non tempora ex molestias
   voluptates molestiae nam dolorum aspernatur nisi ipsam? Voluptate,
   culpa."
 ogImage:
-  url: "/pizza.png"
+  url: "/static/imgs/simple-topdown-movement/cover.gif"
 ---
 
 ## In Construction 🚧
