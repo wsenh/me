@@ -11,7 +11,7 @@ interface Props {
 export const PostSummary: React.FC<Props> = ({ post }) => {
   return (
     <li className="flex flex-row my-12">
-      <div className="mr-12">
+      <div className="mr-12 sm:block hidden">
         <Thumbnail
           width={128}
           height={128}
