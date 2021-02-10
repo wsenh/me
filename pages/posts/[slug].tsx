@@ -1,13 +1,16 @@
 import ErrorPage from "next/error";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { Container } from "../../components/Layout/Container";
 import { PostContentContainer } from "../../components/Layout/PostContentContainer";
 import { PostContent } from "../../components/Post/PostContent";
 import { PostTitle } from "../../components/Post/PostTitle";
 import { CoverImage } from "../../components/Shared/CoverImage";
 import { DateText } from "../../components/Shared/DateText";
 import { HomeButton } from "../../components/Shared/HomeButton";
+import { InfoBar } from "../../components/Shared/InfoBar";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
@@ -33,28 +36,47 @@ const Post: React.FC<Props> = ({ post }) => {
 
   return (
     <>
-      <HomeButton />
-      {router.isFallback ? (
-        <>loading...</>
-      ) : (
-        <>
-          <article className="my-12">
-            <Head>
-              <title>{post.title}</title>
-              <meta property="og:image" content={post.ogImage.url} />
-              <link href="/static/hightlights/prism.css" rel="stylesheet" />
-            </Head>
-            <PostTitle content={post.title} />
-            <CoverImage src={post.coverImage} free />
-            <div className="my-6">
-              <PostContentContainer>
-                <DateText unixtimestamp={post.timestamp} />
-                <PostContent content={post.content} />
-              </PostContentContainer>
-            </div>
-          </article>
-        </>
-      )}
+      <InfoBar>
+        <span>The source code for this blog is available on </span>
+        <Link
+          href={`https://github.com/wsenh/me/tree/main/public/static/posts/${post.slug}`}
+          passHref
+        >
+          <a
+            aria-label="source code"
+            target="_blank"
+            rel="noopener"
+            className="underline"
+          >
+            Github
+          </a>
+        </Link>
+        .
+      </InfoBar>
+      <Container>
+        <HomeButton />
+        {router.isFallback ? (
+          <>loading...</>
+        ) : (
+          <>
+            <article className="my-12">
+              <Head>
+                <title>{post.title}</title>
+                <meta property="og:image" content={post.ogImage.url} />
+                <link href="/static/hightlights/prism.css" rel="stylesheet" />
+              </Head>
+              <PostTitle content={post.title} />
+              <CoverImage src={post.coverImage} free />
+              <div className="my-6">
+                <PostContentContainer>
+                  <DateText unixtimestamp={post.timestamp} />
+                  <PostContent content={post.content} />
+                </PostContentContainer>
+              </div>
+            </article>
+          </>
+        )}
+      </Container>
     </>
   );
 };

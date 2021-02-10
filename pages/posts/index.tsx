@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "../../components/Layout/Container";
 import { PostList } from "../../components/Post/PostList";
 import { HomeButton } from "../../components/Shared/HomeButton";
 import { getAllPosts } from "../../lib/api";
@@ -10,10 +11,10 @@ interface Props {
 
 const IndexPage: React.FC<Props> = ({ posts }) => {
   return (
-    <>
+    <Container>
       <HomeButton />
       <PostList posts={posts} />
-    </>
+    </Container>
   );
 };
 

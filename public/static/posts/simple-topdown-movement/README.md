@@ -19,7 +19,7 @@ _Use Arrows to move the block_
 
 The method I provide is not limited to any game engine. As long as the tools you are using can draw stuff on a screen, the method will work.
 
-I am going to use [Heaps.io](https://heaps.io/) here. The programming language Heaps.io uses is [Haxe](https://haxe.org/) which is a JavaScript like language. You can easily translate the code to your desired language and game engine.
+I am going to use <a href="https://heaps.io/" target="_blank" rel="noopener">Heaps.io</a> here. The programming language Heaps.io uses is <a href="https://haxe.org/" target="_blank" rel="noopener">Haxe</a> which is a JavaScript like language. You can easily translate the code to your desired language and game engine.
 
 ## Draw Player
 
@@ -81,7 +81,7 @@ class Main extends hxd.App {
 }
 ```
 
-After creating the Haxe compile file [base.hxml](https://github.com/wsenh/me/blob/main/public/static/posts/simple-topdown-movement/base.hxml) and [index.html](https://github.com/wsenh/me/blob/main/public/static/posts/simple-topdown-movement/index.html), we can call the following to build the JavaScript output.
+After creating the Haxe compile file <a href="https://github.com/wsenh/me/blob/main/public/static/posts/simple-topdown-movement/base.hxml" target="_blank" rel="noopener">base.hxml</a> and <a href="https://github.com/wsenh/me/blob/main/public/static/posts/simple-topdown-movement/index.html" target="_blank" rel="noopener">index.html</a>, we can call the following to build the JavaScript output.
 
 ```shell
 haxe base.hxml
@@ -284,7 +284,7 @@ Run the game and you will get the following results:
 <iframe src="/static/posts/simple-topdown-movement/index.html"
   width="300" height="300" frameborder="0" allowfullscreen sandbox="allow-scripts">
   <p>
-    <a href="/static/posts/simple-topdown-movement/index.html">
+    <a href="/static/posts/simple-topdown-movement/index.html" target="_blank" rel="noopener">
        Fallback link for browsers that don't support iframes
     </a>
   </p>

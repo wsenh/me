@@ -2,7 +2,6 @@ import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import Head from "next/head";
 import React from "react";
-import { Container } from "../components/Layout/Container";
 import { Footer } from "../components/Layout/Footer";
 import { Layout } from "../components/Layout/Layout";
 import "../styles/globals.css";
@@ -15,9 +14,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <title>Sen Hung Wong</title>
       </Head>
       <Layout>
-        <Container>
-          <Component {...pageProps} />
-        </Container>
+        <Component {...pageProps} />
         <Footer />
       </Layout>
     </ThemeProvider>
