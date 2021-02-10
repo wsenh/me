@@ -44,7 +44,7 @@ const Post: React.FC<Props> = ({ post }) => {
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
             <PostTitle content={post.title} />
-            <CoverImage href="/posts/[slug]" src={post.coverImage} free />
+            <CoverImage src={post.coverImage} free />
             <div className="my-6">
               <PostContentContainer>
                 <DateText unixtimestamp={post.timestamp} />
