@@ -43,7 +43,6 @@ const Post: React.FC<Props> = ({ post }) => {
               <title>{post.title}</title>
               <meta property="og:image" content={post.ogImage.url} />
               <link href="/static/hightlights/prism.css" rel="stylesheet" />
-              <script defer src="/static/hightlights/prism.js" />
             </Head>
             <PostTitle content={post.title} />
             <CoverImage src={post.coverImage} free />

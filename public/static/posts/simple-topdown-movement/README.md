@@ -157,7 +157,8 @@ class Entity {
         var vx = 0.;
         var vy = 0.;
 
-        // When pressing WASD/Arrows, we modify the movement direction vector.
+        // When pressing WASD/Arrows,
+        // we modify the movement direction vector.
         if (Key.isDown(Key.A) || Key.isDown(Key.LEFT))
             vx -= 1;
         if (Key.isDown(Key.D) || Key.isDown(Key.RIGHT))
@@ -191,8 +192,9 @@ class Entity {
      */
     function move(xdir:Float, ydir:Float) {
         /*
-         * Normalize the direction vector so walking diagonally
-         * will travel the same distance as walking horizontally or vertically.
+         * Normalize the direction vector so walking
+         * diagonally will travel the same distance
+         * as walking horizontally or vertically.
          */
         if (xdir != 0 && ydir != 0) {
             var dist = Math.sqrt(xdir * xdir + ydir * ydir);

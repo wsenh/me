@@ -17,6 +17,14 @@
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
 
+.markdown a {
+  @apply underline;
+}
+
+.markdown img {
+  @apply inline-block;
+}
+
 .markdown code,
 .markdown kbd,
 .markdown pre {
