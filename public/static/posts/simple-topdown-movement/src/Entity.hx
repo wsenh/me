@@ -15,7 +15,7 @@ class Entity {
     var dy:Float = 0.;
 
     // The entity moving speed.
-    var spd:Float = 25.;
+    var spd:Float = 50.;
 
     // The friction that slows down the entity.
     var drag:Float = .85;

@@ -1,5 +1,5 @@
 ---
-title: "A Simple Approach to Topdown Movement"
+title: "A Simple Responsive Topdown Movement Approach"
 timestamp: 1612775790
 coverImage: "/static/imgs/simple-topdown-movement/cover.webm"
 excerpt: 'To create a "good feeling" in action games, player movement is one of the essential mechanics in modern action games. I am going to introduce a way of making a top down movement that aims on simplicity and responsiveness.'
@@ -115,7 +115,7 @@ class Entity {
     var dy:Float = 0.;
 
     // The entity moving speed.
-    var spd:Float = 25.;
+    var spd:Float = 50.;
 
     // The friction that slows down the entity.
     var drag:Float = .85;
@@ -144,7 +144,7 @@ class Entity {
     var y:Float = 0.;
     var dx:Float = 0.;
     var dy:Float = 0.;
-    var spd:Float = 25.;
+    var spd:Float = 50.;
     var drag:Float = .85;
 
     /* ... */
@@ -277,7 +277,7 @@ class Main extends hxd.App {
 }
 ```
 
-## Demo
+## Result
 
 Run the game and you will get the following results:
 
@@ -291,3 +291,5 @@ Run the game and you will get the following results:
 </iframe>
 
 _Use WASD/Arrows to move the red block_
+
+The movement is responsive since once the player pressed the key, the block reaches highest move speed. By adjusting `drag` in `src/Entity.hx`, we can fine-tune the game feel.

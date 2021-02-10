@@ -31,7 +31,7 @@ EReg.prototype = {
 };
 var Entity = function(p) {
 	this.drag = .85;
-	this.spd = 25.;
+	this.spd = 50.;
 	this.dy = 0.;
 	this.dx = 0.;
 	this.y = 0.;
