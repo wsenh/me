@@ -4,9 +4,11 @@ import { Splash } from "./Splash";
 
 export const Intro: React.FC = () => {
   return (
-    <section className="h-screen w-full flex flex-col flex items-center justify-center">
-      <Splash />
-      <Text content="A game development enthusiast." />
+    <section className="h-screen w-full flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
+        <Splash />
+        <Text content="A game development enthusiast." />
+      </div>
     </section>
   );
 };

@@ -9,15 +9,9 @@ ogImage:
 
 To create a "good feeling" in action games, player movement is one of the essential mechanics in modern action games. I am going to introduce a way of making a top down movement that aims on simplicity and responsiveness.
 
-<iframe src="/static/posts/simple-topdown-movement/p8/topdownmovement.html"
-  width="214" height="200"
-  frameborder="0" allowfullscreen scrolling="no" sandbox="allow-scripts">
-  <p>
-    <a href="/static/posts/simple-topdown-movement/p8/topdownmovement.html">
-       Fallback link for browsers that don't support iframes
-    </a>
-  </p>
-</iframe>
+<a href="/static/posts/simple-topdown-movement/p8/topdownmovement.html" alt="PICO-8 Movement Demo" target="_blank" rel="noopener">
+  <img src="/static/imgs/pico8.png" alt="PICO-8 Movement Demo" />
+</a>
 
 _Use Arrows to move the block_
 
