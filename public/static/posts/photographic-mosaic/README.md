@@ -27,7 +27,10 @@ The more detailed steps are:
 4. Resize and replace the area with the similar tile image.
 5. Repeat from step 1 until target image is replaced entirely by the tiles.
 
-<!-- animated gif -->
+<video autoPlay muted playsInline controls>
+  <source src="/static/imgs/photographic-mosaic/illustration.webp" type="video/webp" />
+  <source src="/static/imgs/photographic-mosaic/illustration.mp4" type="video/mp4" />
+</video>
 
 ## The Code
 
