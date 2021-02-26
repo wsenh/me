@@ -13,7 +13,7 @@ export const getAllPosts = () => {
 };
 
 export const getPostBySlug = (slug: string) => {
-  const fullPath = path.join(postsDirectory, slug, `README.md`);
+  const fullPath = path.join(postsDirectory, slug, `index.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   return { ...data, slug, content } as PostProps;
