@@ -1,14 +1,24 @@
 import ErrorPage from "next/error";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { Container } from "../../components/Layout/Container";
+import { PostContentContainer } from "../../components/Layout/PostContentContainer";
+import { PostContent } from "../../components/Post/PostContent";
+import { PostTitle } from "../../components/Post/PostTitle";
+import { CoverImage } from "../../components/Shared/CoverImage";
+import { DateText } from "../../components/Shared/DateText";
+import { HomeButton } from "../../components/Shared/HomeButton";
+import { InfoBar } from "../../components/Shared/InfoBar";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
 export type PostProps = {
   slug: string;
   title: string;
-  date: string;
+  excerpt: string;
+  timestamp: number;
   coverImage: string;
   ogImage: {
     url: string;
@@ -25,21 +35,49 @@ const Post: React.FC<Props> = ({ post }) => {
   if (!router.isFallback && !post?.slug) return <ErrorPage statusCode={404} />;
 
   return (
-    <div>
-      {router.isFallback ? (
-        <>loading...</>
-      ) : (
-        <>
-          <article>
-            <Head>
-              <title>{post.title}</title>
-              {/* <meta property="og:image" content={post.ogImage.url} /> */}
-            </Head>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </article>
-        </>
-      )}
-    </div>
+    <>
+      <InfoBar>
+        <span>The source code for this blog is available on </span>
+        <Link
+          href={`https://github.com/wsenh/me/tree/main/public/static/posts/${post.slug}`}
+          passHref
+        >
+          <a
+            aria-label="source code"
+            target="_blank"
+            rel="noopener"
+            className="underline"
+          >
+            Github
+          </a>
+        </Link>
+        .
+      </InfoBar>
+      <Container>
+        <HomeButton />
+        {router.isFallback ? (
+          <>loading...</>
+        ) : (
+          <>
+            <article className="my-12">
+              <Head>
+                <title>{post.title}</title>
+                <meta property="og:image" content={post.ogImage.url} />
+                <link href="/static/hightlights/prism.css" rel="stylesheet" />
+              </Head>
+              <PostTitle content={post.title} />
+              <CoverImage src={post.coverImage} free />
+              <div className="my-6">
+                <PostContentContainer>
+                  <DateText unixtimestamp={post.timestamp} />
+                  <PostContent content={post.content} />
+                </PostContentContainer>
+              </div>
+            </article>
+          </>
+        )}
+      </Container>
+    </>
   );
 };
 
@@ -50,7 +88,7 @@ interface Params {
 }
 
 export const getStaticProps = async ({ params }: Params) => {
-  const post = getPostBySlug(params.slug, ["title", "slug", "content"]);
+  const post = getPostBySlug(params.slug);
   const content = await markdownToHtml(post.content || "");
   return {
     props: {
@@ -64,7 +102,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
 export const getStaticPaths = async () => {
   return {
-    paths: getAllPosts(["slug"]).map((post) => ({
+    paths: getAllPosts().map((post) => ({
       params: { slug: post.slug },
     })),
     fallback: false,

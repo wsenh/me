@@ -1,0 +1,45 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown a {
+  @apply underline;
+}
+
+.markdown img {
+  @apply inline-block;
+}
+
+.markdown code,
+.markdown kbd,
+.markdown pre {
+  font-family: "Fira Code", SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    monospace;
+  @apply text-base;
+}
+
+.markdown p > code {
+  background-color: #272822;
+  color: #f8f8f2;
+  @apply rounded px-1 mx-1;
+}
+
+.markdown pre > code {
+  font-size: 14px;
+  @apply mb-4;
+}

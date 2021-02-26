@@ -31,7 +31,7 @@ EReg.prototype = {
 };
 var Entity = function(p) {
 	this.drag = .85;
-	this.spd = 25.;
+	this.spd = 50.;
 	this.dy = 0.;
 	this.dx = 0.;
 	this.y = 0.;
@@ -45,9 +45,9 @@ Entity.prototype = {
 		this.dx *= this.drag;
 		this.dy *= this.drag;
 		var moveDir = this.capturePlayerInput();
-		this.move(moveDir.vx,moveDir.vy,dt);
-		this.x += this.dx;
-		this.y += this.dy;
+		this.move(moveDir.vx,moveDir.vy);
+		this.x += this.dx * dt;
+		this.y += this.dy * dt;
 		var _this = this.g;
 		_this.posChanged = true;
 		_this.x = this.x;
@@ -55,17 +55,17 @@ Entity.prototype = {
 		_this.posChanged = true;
 		_this.y = this.y;
 	}
-	,move: function(xdir,ydir,dt) {
+	,move: function(xdir,ydir) {
 		if(xdir != 0 && ydir != 0) {
 			var dist = Math.sqrt(xdir * xdir + ydir * ydir);
 			xdir /= dist;
 			ydir /= dist;
 		}
 		if(xdir != 0) {
-			this.dx += xdir * this.spd * dt;
+			this.dx += xdir * this.spd;
 		}
 		if(ydir != 0) {
-			this.dy += ydir * this.spd * dt;
+			this.dy += ydir * this.spd;
 		}
 	}
 	,capturePlayerInput: function() {
@@ -86,8 +86,8 @@ Entity.prototype = {
 		return { vx : vx, vy : vy};
 	}
 	,drawPlayer: function() {
-		this.g.beginFill(16250599);
-		this.g.drawRect(0,0,10,10);
+		this.g.beginFill(16711680);
+		this.g.drawRect(0,0,32,32);
 		this.g.endFill();
 	}
 	,__class__: Entity
