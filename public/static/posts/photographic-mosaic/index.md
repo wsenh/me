@@ -36,7 +36,7 @@ The more detailed steps are:
 
 ### Image Preparation
 
-I downloaded some [shiba images](/static/posts/photographic-mosaic/assets/source) from [pinterest.ca](https://www.pinterest.ca/) as our source image set, and we will use some of them as the target image to produce photographic mosaic.
+I downloaded some [shiba images](https://github.com/wsenh/me/tree/main/public/static/posts/photographic-mosaic/assets/source) from [pinterest.ca](https://www.pinterest.ca/) as our source image set, and we will use some of them as the target image to produce photographic mosaic.
 
 I put all the source images in `assets/source` folder, and created a `assets/output` folder for storing our output images.
 
